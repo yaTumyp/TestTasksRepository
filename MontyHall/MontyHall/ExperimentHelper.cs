@@ -53,9 +53,9 @@ namespace MontyHall
         /// Gets experiment results from the random samples according the strategy for each experiment.
         /// </summary>
         /// <param name="experimentsCount">Сount of the experiments.</param>
-        /// <param name="chageChoice">Strategy</param>
+        /// <param name="changeChoice">Strategy</param>
         /// <returns></returns>
-        private static List<bool> GetResultsList(int experimentsCount, bool chageChoice)
+        private static List<bool> GetResultsList(int experimentsCount, bool changeChoice)
         {
             int experimentCounter = 0;
 
@@ -72,7 +72,7 @@ namespace MontyHall
                 ///                         we will have only one true(car) and one false(goat) in final sample.
                 /// So for changeing choice strategy we can use inversion of our main choice as the result.
                 /// In other words goat become a car and vice versa.
-                if (chageChoice)
+                if (changeChoice)
                 {
                     resultsList.Add(!experimentalSample[choiceIndex]);
                 }
